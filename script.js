@@ -15,3 +15,12 @@ const changeBackground = event=>{
 }
 const images = document.getElementById("images");
 images.addEventListener("click",changeBackground);
+
+let isSettingsHide = false;
+const changeSettingsVision = () => {
+	isSettingsHide = !isSettingsHide;
+	const settingsModel = document.getElementById("settings");
+	settingsModel.style.display = isSettingsHide ? "none" : "block";
+}
+const settingsIcon = document.querySelector(".settings-icon");
+settingsIcon.addEventListener("click",changeSettingsVision);
